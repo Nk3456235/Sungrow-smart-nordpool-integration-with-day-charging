@@ -1,0 +1,52 @@
+---
+nordpool_mean_high_today_vs_low_tomorrow:
+  module: nordpool_mean_high_today_vs_low_tomorrow
+  class: NordpoolMeanHighTodayVsLowTomorrow
+
+nordpool_mean_low_vs_high_price_tomorrow:
+  module: nordpool_mean_low_vs_high_price_tomorrow
+  class: NordpoolMeanLowVsHighPriceTomorrow
+
+nordpool_calculations:
+  module: nordpool_calculations
+  class: NordpoolCalculation
+
+nordpool_mean_low_vs_high_price_today:
+  module: nordpool_mean_low_vs_high_price_today
+  class: NordpoolMeanLowVsHighPriceToday
+
+extra_night_discharging:
+  module: extra_night_discharging
+  class: ExtraNightDischarging
+
+dynamic_soc_manager:
+  module: dynamic_soc_manager
+  class: DynamicSOCManager
+
+smart_night_charging:
+  module: smart_night_charging
+  class: SmartNightCharging
+
+smart_night_charging_sensors:
+  module: smart_night_charging_sensors
+  class: SmartNightChargingSensors
+
+smart_day_discharging:
+  module: smart_day_discharging
+  class: SmartDayDischarging
+
+battery_charging_app:
+  module: battery_charging_app
+  class: BatteryChargingApp
+
+smart_cheap_night_charging:
+  module: smart_cheap_night_charging
+  class: SmartCheapNightCharging
+
+dynamicdaycharginganddischargingapp:
+  module: dynamic_day_charging_and_discharging_app
+  class: DynamicDayChargingAndDischargingApp
+
+battery_discharge_monitor:
+  module: battery_discharge_monitor
+  class: BatteryDischargeMonitor
