@@ -34,7 +34,8 @@ class DynamicSOCManager(hass.Hass):
             # On Sunday, set SOC values to 100% high and 1% low
             self.set_state("input_number.set_sg_min_soc", state=1)
             self.set_state("input_number.set_sg_max_soc", state=100)
-            self.log("Today is Sunday. Min SOC set to 1% and Max SOC set to 100%.")
+            self.log("Today is Sunday, time for battery balancing. Min SOC set to 1% and Max SOC set to 100%.")
+            self.log_to_logbook("Today is Sunday, time for battery balancing. Min SOC set to 1% and Max SOC set to 100%.")
             self.call_service("logbook/log", 
                 name="Dynamic SOC Manager", 
                 message="Today is Sunday. Min SOC set to 1% and Max SOC set to 100%.",
