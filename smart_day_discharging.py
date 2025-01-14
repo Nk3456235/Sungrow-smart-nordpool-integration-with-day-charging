@@ -134,9 +134,9 @@ class SmartDayDischarging(hass.Hass):
         # If the mean_price_value is 0, use the value from sensor.chosen_3_hours instead
         if mean_price_value == 0:
             mean_price_value = float(self.get_state('sensor.mock_chosen_3_hours', state=None) or 0)
-            self.log(f"Using value from sensor.mock_chosen_3_hours: {mean_price_value:.2f} öre")
+            self.log(f"Missing value of last charge, using value from sensor.mock_chosen_3_hours: {mean_price_value:.2f} öre")
         else:
-            self.log(f"Mean night charging price: {mean_price_value:.2f} öre")
+            self.log(f"Mean price of last charge: {mean_price_value:.2f} öre")
 
         # Calculate the price difference
         price_difference = mean_7_expensive - mean_price_value
