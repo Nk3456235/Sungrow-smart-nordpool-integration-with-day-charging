@@ -8,7 +8,7 @@ class SmartCheapNightCharging(hass.Hass):
         # Define sensor names
         self.sensor_name = "sensor.nordpool_kwh_se3_sek_3_10_025"
         self.output_selected_hours = "sensor.selected_charging_hours0"
-        self.output_prices_for_selected_hours = "sensor.selected_charging_hours_prices0"  # New sensor for prices
+        self.output_prices_for_selected_hours = "sensor.selected_charging_hours_prices"  # New sensor for prices
 
         # Trigger the update calculation every day at 23:58
         self.run_daily(self.update_charging_hours, datetime.time(23, 58))
@@ -18,9 +18,6 @@ class SmartCheapNightCharging(hass.Hass):
 
     def update_charging_hours(self, *args):
         """Update the charging hours based on the cheapest hours and price differences."""
-                
-        self.set_state(self.output_selected_hours, state="unknown", attributes={})
-        self.set_state(self.output_prices_for_selected_hours, state="unknown", attributes={})
         
         # Fetch tomorrow's prices from the Nordpool sensor
         tomorrow_prices = self.get_state(self.sensor_name, attribute="tomorrow") or []
