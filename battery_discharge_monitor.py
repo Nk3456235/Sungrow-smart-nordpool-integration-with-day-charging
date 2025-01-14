@@ -33,7 +33,7 @@ class BatteryDischargeMonitor(hass.Hass):
 
         # If the sensor value is less than 40, stop discharging
         if sensor_value < 40:
-            self.log(f"Sensor value is {sensor_value}, stopping battery discharging.")
+            self.log(f"Sensor value is {sensor_value}, if currently discharging, stopping.")
             self.stop_discharging()
 
     def stop_discharging(self):
