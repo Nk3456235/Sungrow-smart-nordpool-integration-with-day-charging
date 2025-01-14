@@ -85,7 +85,6 @@ class SmartNightCharging(hass.Hass):
                             "mean_3_cheapest_night": mean_3,
                         }
                     )
-                    self.stop_charging({})
                     return
 
                 # Log the results
