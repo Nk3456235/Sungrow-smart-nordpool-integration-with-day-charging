@@ -22,7 +22,7 @@ class SmartNightChargingSensors(hass.Hass):
         """Update the charging hours based on the cheapest hours and price differences."""
         
         # Fetch tomorrow's prices from the Nordpool sensor (assumed to be "tomorrow")
-        tomorrow_prices = self.get_state(self.sensor_name, attribute="tomorrow") or []
+        tomorrow_prices = self.get_state(self.sensor_name, attribute="today") or []
 
         # Ensure there are enough data points (7 night hours)
         if len(tomorrow_prices) >= 7:
