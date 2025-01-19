@@ -17,8 +17,6 @@ class SmartNightChargingSensors(hass.Hass):
         self.run_daily(self.update_charging_hours, datetime.time(14, 0))
         self.run_daily(self.update_charging_hours, datetime.time(6, 1))
 
-        # Run the calculation once at startup
-        self.update_charging_hours()
 
     def update_charging_hours(self, *args):
         """Update the charging hours based on the cheapest hours and price differences."""
