@@ -112,7 +112,7 @@ class SmartDayDischarging(hass.Hass):
         filtered_prices = today_prices[6:23]  # hours 6 to 22 (inclusive)
         self.log(f"Filtered prices (6:00-22:00): {filtered_prices}")
 
-        # Calculate the mean price of the 7 most expensive hours
+        # Fetch mean price of last charge
         mean_price_value = float(self.get_state(self.mean_price_sensor, state=None) or 0)
 
         # If the mean_price_value is 0, use the value from sensor.chosen_3_hours instead
