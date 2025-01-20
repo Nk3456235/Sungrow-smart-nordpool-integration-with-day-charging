@@ -87,7 +87,7 @@ class DynamicDayChargingAndDischargingApp(hass.Hass):
 
         # If all checks pass, log the final decision
         self.log(f"Selected cheapest hour: {selected_hour}:00 with price {cheapest_hour[1]:.2f} öre.")
-        self.set_state("sensor.cheap_hour_comparison1", state=f"Selected hour {selected_hour}:00, price {cheapest_hour[1]:.2f} öre.")
+        self.set_state("sensor.cheap_hour_comparison1", state=f"{selected_hour}:00 | {cheapest_hour[1]:.2f} Öre/kWh")
 
         
         # If the price difference is sufficient, proceed with evaluating the price differences
